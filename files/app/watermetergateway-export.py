@@ -67,11 +67,11 @@ class AppMetrics:
             LOG.info(response.status_code)
             
             LOG.info(response)
-            LOG.info(response.json())
+            json = response.json()
 
-            for v, k in response.json():
+            for k in response.json():
                 LOG.info(k)
-                LOG.info(v)
+                LOG.info(json[k])
 
         except requests.exceptions.HTTPError as error:
             print("!!!!!!!!!!!!")
