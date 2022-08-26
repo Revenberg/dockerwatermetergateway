@@ -27,11 +27,11 @@ if [ $ex == true ]; then
 
     echo "==========================================================="
     echo "=                                                         ="
-    echo "= docker-conmponse revenberg/watermetergatewayexporter up ="
+    echo "= docker-compose up                                       ="
     echo "=                                                         ="
     echo "==========================================================="
 
-    docker-conmponse revenberg/watermetergatewayexporter up
+    docker-compose up
 fi
 
 cd -
