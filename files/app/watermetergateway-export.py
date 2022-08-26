@@ -44,7 +44,7 @@ class AppMetrics:
         self._prometheus['watermeter_pulse_factor']     = Gauge(PROMETHEUS_PREFIX + 'watermeter_pulse_factor', 'watermeter_pulse_factor')
         self._prometheus['watermeter_used_last_minute'] = Gauge(PROMETHEUS_PREFIX + 'watermeter_used_last_minute', 'watermeter_used_last_minute')
         self._prometheus['watermeter_pulsecount']       = Gauge(PROMETHEUS_PREFIX + 'watermeter_pulsecount', 'watermeter_pulsecount')
-        self._prometheus['leak_detect']                 = Info(PROMETHEUS_PREFIX + 'leak_detect', 'leak_detect', states=['false', 'true'])
+        self._prometheus['leak_detect']                 = Enum(PROMETHEUS_PREFIX + 'leak_detect', 'leak_detect', states=['false', 'true'])
 
     def run_metrics_loop(self):
         """Metrics fetching loop"""
