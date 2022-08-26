@@ -37,7 +37,7 @@ class AppMetrics:
         # Prometheus metrics to collect
         self._prometheus['mac_address']                 = Info(PROMETHEUS_PREFIX + 'mac_address', 'mac_address model')
         self._prometheus['gateway_model']               = Info(PROMETHEUS_PREFIX + 'gateway_model', 'gateway model')
-        self._prometheus['startup_time']                = Info(PROMETHEUS_PREFIX + 'startup_time startup_time')
+        self._prometheus['startup_time']                = Info(PROMETHEUS_PREFIX + 'startup_time', 'startup_time')
         self._prometheus['firmware_running']            = Info(PROMETHEUS_PREFIX + 'firmware_running', 'firmware_running')
         self._prometheus['firmware_update_available']   = Info(PROMETHEUS_PREFIX + 'firmware_update_available', 'firmware_update_available')
         self._prometheus['watermeter_value']            = Gauge(PROMETHEUS_PREFIX + 'watermeter_value', 'watermeter_value')
