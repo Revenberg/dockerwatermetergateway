@@ -63,7 +63,6 @@ class AppMetrics:
             response = requests.get("http://" + self.IP +":82/watermeter/api/read")
             response.raise_for_status()
             LOG.info("The request was a success!")
-            print(response.text())
             print(response.json())
             for v in response.json():
                 print(v)
