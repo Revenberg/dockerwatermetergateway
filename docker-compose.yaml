@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  watermetergatewayexporter:
+    image: revenberg/watermetergatewayexporter
+    container_name: watermetergatewayexporter
+    environment:
+      - IP=192.168.2.20
+      - PROMETHEUS_PORT=9009
+      - LOG_LEVEL=DEBUG
+    restart: always   
+    ports:
+      - 9009:9009
+    expose:
+      - 9009
