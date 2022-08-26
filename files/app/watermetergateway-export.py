@@ -69,9 +69,16 @@ class AppMetrics:
             LOG.info(response)
             json = response.json()
 
-            for k in response.json():
-                LOG.info(k)
-                LOG.info(json[k])
+            self._prometheus['mac_address'].info( { 'mac_address': json['mac_address'] } )
+            self._prometheus['gateway_model'].info( { 'gateway_model': json['gateway_model'] } )
+            self._prometheus['startup_time'].info( { 'startup_time': json['startup_time'] } )
+            self._prometheus['firmware_running'].info( { 'firmware_running': json['firmware_running'] } )
+            self._prometheus['firmware_update_available'].info( { 'firmware_update_available': json['firmware_update_available'] } )
+            self._prometheus['watermeter_value'].set( json['watermeter_value'] )
+            self._prometheus['watermeter_pulse_factor'].set( json['watermeter_pulse_factor'] )
+            self._prometheus['watermeter_used_last_minute'].set( json['watermeter_used_last_minute'] )
+            self._prometheus['watermeter_pulsecount'].set( json['watermeter_pulsecount'] )
+            self._prometheus['leak_detect'].enum( { 'leak_detect': json['leak_detect'] } )
 
         except requests.exceptions.HTTPError as error:
             print("!!!!!!!!!!!!")
