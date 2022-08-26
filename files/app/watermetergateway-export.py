@@ -78,7 +78,7 @@ class AppMetrics:
             self._prometheus['watermeter_pulse_factor'].set( json['watermeter_pulse_factor'] )
             self._prometheus['watermeter_used_last_minute'].set( json['watermeter_used_last_minute'] )
             self._prometheus['watermeter_pulsecount'].set( json['watermeter_pulsecount'] )
-            self._prometheus['leak_detect'].state( { 'leak_detect': json['leak_detect'] } )
+            self._prometheus['leak_detect'].state( json['leak_detect'] )
 
         except requests.exceptions.HTTPError as error:
             print("!!!!!!!!!!!!")
