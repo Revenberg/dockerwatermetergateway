@@ -64,6 +64,8 @@ class AppMetrics:
             response.raise_for_status()
             LOG.info("The request was a success!")
             
+            LOG.info(response.status_code)
+            
             print(response)
             print(response.status_code)
             print(response.json())
