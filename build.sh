@@ -30,6 +30,8 @@ if [ $ex == true ]; then
     echo "= docker-conmponse revenberg/watermetergatewayexporter up ="
     echo "=                                                         ="
     echo "==========================================================="
+
+    docker-conmponse revenberg/watermetergatewayexporter up
 fi
 
 cd -
