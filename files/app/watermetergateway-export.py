@@ -35,16 +35,16 @@ class AppMetrics:
         self.polling_interval_seconds = polling_interval_seconds
 
         # Prometheus metrics to collect
-        self._prometheus['mac_address']                 = Info(self.PROMETHEUS_PREFIX + 'mac_address', 'mac_address model')
-        self._prometheus['gateway_model']               = Info(self.PROMETHEUS_PREFIX + 'gateway_model', 'gateway model')
-        self._prometheus['startup_time']                = Info(self.PROMETHEUS_PREFIX + 'startup_time startup_time')
-        self._prometheus['firmware_running']            = Info(self.PROMETHEUS_PREFIX + 'firmware_running', 'firmware_running')
-        self._prometheus['firmware_update_available']   = Info(self.PROMETHEUS_PREFIX + 'firmware_update_available', 'firmware_update_available')
-        self._prometheus['watermeter_value']            = Gauge(self.PROMETHEUS_PREFIX + 'watermeter_value', 'watermeter_value')
-        self._prometheus['watermeter_pulse_factor']     = Gauge(self.PROMETHEUS_PREFIX + 'watermeter_pulse_factor', 'watermeter_pulse_factor')
-        self._prometheus['watermeter_used_last_minute'] = Gauge(self.PROMETHEUS_PREFIX + 'watermeter_used_last_minute', 'watermeter_used_last_minute')
-        self._prometheus['watermeter_pulsecount']       = Gauge(self.PROMETHEUS_PREFIX + 'watermeter_pulsecount', 'watermeter_pulsecount')
-        self._prometheus['leak_detect']                 = Info(self.PROMETHEUS_PREFIX + 'leak_detect', 'leak_detect', states=['false', 'true'])
+        self._prometheus['mac_address']                 = Info(PROMETHEUS_PREFIX + 'mac_address', 'mac_address model')
+        self._prometheus['gateway_model']               = Info(PROMETHEUS_PREFIX + 'gateway_model', 'gateway model')
+        self._prometheus['startup_time']                = Info(PROMETHEUS_PREFIX + 'startup_time startup_time')
+        self._prometheus['firmware_running']            = Info(PROMETHEUS_PREFIX + 'firmware_running', 'firmware_running')
+        self._prometheus['firmware_update_available']   = Info(PROMETHEUS_PREFIX + 'firmware_update_available', 'firmware_update_available')
+        self._prometheus['watermeter_value']            = Gauge(PROMETHEUS_PREFIX + 'watermeter_value', 'watermeter_value')
+        self._prometheus['watermeter_pulse_factor']     = Gauge(PROMETHEUS_PREFIX + 'watermeter_pulse_factor', 'watermeter_pulse_factor')
+        self._prometheus['watermeter_used_last_minute'] = Gauge(PROMETHEUS_PREFIX + 'watermeter_used_last_minute', 'watermeter_used_last_minute')
+        self._prometheus['watermeter_pulsecount']       = Gauge(PROMETHEUS_PREFIX + 'watermeter_pulsecount', 'watermeter_pulsecount')
+        self._prometheus['leak_detect']                 = Info(PROMETHEUS_PREFIX + 'leak_detect', 'leak_detect', states=['false', 'true'])
 
     def run_metrics_loop(self):
         """Metrics fetching loop"""
