@@ -56,7 +56,7 @@ class AppMetrics:
             response.raise_for_status()
             LOG.info("The request was a success!")
             LOG.info(response.text())
-            LOG.info(response.json())            
+            print(response.json())            
         except requests.exceptions.HTTPError as error:
             LOG.error(error)
 
