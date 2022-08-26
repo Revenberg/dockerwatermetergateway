@@ -65,12 +65,14 @@ class AppMetrics:
             LOG.info("The request was a success!")
             
             print(response)
+            print(response.status_code)
             print(response.json())
 
             for v in response.json():
                 print(v)
 
         except requests.exceptions.HTTPError as error:
+            print("!!!!!!!!!!!!")
             LOG.error(error)
 
         #self.location.info( { 'location': location } )
