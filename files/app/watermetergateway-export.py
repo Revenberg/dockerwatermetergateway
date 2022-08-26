@@ -71,7 +71,7 @@ class AppMetrics:
 
             for v, k in response.json():
                 LOG.info(k)
-    	        LOG.info(v)
+                LOG.info(v)
 
         except requests.exceptions.HTTPError as error:
             print("!!!!!!!!!!!!")
