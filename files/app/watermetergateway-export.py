@@ -12,7 +12,7 @@ PROMETHEUS_PREFIX = os.getenv("PROMETHEUS_PREFIX", "openweathermap")
 PROMETHEUS_PORT   = int(os.getenv("PROMETHEUS_PORT", "9003"))
 
 IP                       = os.getenv("IP", "")
-polling_interval_seconds = int(os.getenv("POLLING_INTERVAL_SECONDS", "60"))
+polling_interval_seconds = int(os.getenv("POLLING_INTERVAL_SECONDS", "15"))
 
 LOGFORMAT = '%(asctime)-15s %(message)s'
 
